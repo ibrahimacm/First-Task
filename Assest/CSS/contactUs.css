@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.padding-0{
+    padding:0 !important;
+    margin:0 !important;
+}
+.header{
+    background-color: rgb(255, 255, 255);
+}
+.header .nav-item{
+    padding: 12px 10px 12px 10px;
+}
+.header .nav-item .nav-link{
+    font-weight: 620;
+}
+
+.header .nav-item .nav-link:hover{
+   color: rgb(47, 203, 200);
+}
+
+
+#con-form{
+    background-color: rgb(245, 245, 245);
+}
+
+#form h2{
+   
+    padding: 0px 0px 0px 0;
+    
+}
+
+#form .message{
+    padding: 2% 0 2% 0;
+    margin: 13% 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+}
+#form .back{
+    background-color: rgb(35 165 17 / 66%);
+    color: rgb(255 250 250);
+    border-radius: 10px;
+    padding: 11px 0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 50%;
+    margin: 2% auto 0 auto;
+    text-align: center;
+    display: none;
+   
+}
+
+#form p{
+    
+    padding: 0px 0px 0px 0px;
+   color: rgb(125, 125, 125);
+}
+
+.div-form{
+    margin: 10% 18% 10%;
+}
+
+.div-form #form-name{
+    padding: 7px 0px 11px 14px;
+    margin: 0px 0 19px 0;
+}
+
+
+.div-form #form-email{
+    padding: 7px 0px 11px 14px;
+    margin: 0px 0 19px 0;
+}
+
+.div-form #form-title{
+    padding: 7px 0px 11px 14px;
+    margin: 0px 0 19px 0;
+}
+
+.div-form #form-textArea{
+    padding: 10px 0px 80px 14px;
+}
+
+
+.div-form #form-button{
+    background-color: rgb(16, 201, 195);
+    color: white;
+    border-color: rgb(16, 201, 195);
+    width: 222px;
+    font-weight: 500;
+    padding: 12px 19px 15px 6px;
+}
+
+.padding-form{
+    padding: 0 0 0 0;
+}
+
+#form h1{
+    font-size: 1.5rem;
+    font-weight: 640;
+    margin: 10% 0 5% 18%;
+}
+
+#form .info{
+    font-size: 13px;
+    margin: 0 0 10% 18%;
+}
+
+#form .con{
+    font-size: 13px;
+}
+
+#form .head{
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 5px 0 18%;
+    color: #212529;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 80%;
+    /* The width is the width of the web page */
+    margin: 5% auto 7% auto;
+  }
+
+
+#footer {
+    background-color: black;
+}
+
+#footer .links-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer h2{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px 0 14px 15px;
+}
+
+#footer p{
+    color: white;
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 3px 0px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#footer ul{
+    list-style: none;
+}
+
+
+#footer ul li{
+    color: white;
+    margin: 2px 0px;
+    font-size: 14px;
+    font-weight: 100;
+}
+ 
+#footer ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#footer ol, ul {
+    padding-left: 1rem;
+}
+
+
+@media (max-width: 575px){
+    
+    #footer h2{
+         margin: 0px 0 14px 20px;
+    }
+
+    #footer p{
+         padding: 0px 0px 0px 20px;
+    }
+
+}
+
+
+@media (min-width: 779px) and (max-width: 873px) {
+    
+    
+    #footer h2{
+        margin: 0px 0 14px 15px;
+    }
+    
+    #footer p{
+        margin: 0px 0px 3px 17px;
+        padding: 0 0 0 0;
+    }
+    
+    
+}
+    
+    
+@media (min-width: 768px) and (max-width: 778px) {
+        
+        
+        #footer h2{
+            margin: 0px 0 14px 10px;
+        }
+        
+        #footer p{
+            margin: 0px 0px 3px 10px;
+            padding: 0 0 0 0;
+        }
+        
+        
+}
+        
+@media (max-width: 411px) {
+            
+        #footer h2{
+        margin: 0px 0 14px 0px;
+        }
+    
+        #footer p{
+            padding: 0px 0px 0px 0px;
+        }
+    
+        #footer ol, ul {
+            padding-left: 0rem;
+        } 
+}

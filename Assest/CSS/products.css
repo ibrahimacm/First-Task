@@ -1,0 +1,26 @@
+
+.header{
+    background-color: rgb(255, 255, 255);
+}
+
+
+#products {
+    background-color: #f6f6f6 !important;
+}
+
+#products p{
+    font-size: 14px;
+    color: #7c7c7c !important;
+}
+
+
+#products .forHov:hover .forHov1{
+    
+    background-color: rgba(49, 205, 201, 0.76) 
+    
+}
+
+#products .forHov-img{
+     height: 15%;
+     width: 15%;
+  }

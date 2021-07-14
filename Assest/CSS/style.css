@@ -1,0 +1,591 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.padding-0{
+    padding:0 !important;
+    margin:0 !important;
+}
+.header{
+    background-color: rgb(227, 237, 239);
+}
+.header .nav-item{
+    padding: 12px 10px 12px 10px;
+}
+.header .nav-item .nav-link{
+    font-weight: 620;
+}
+
+.header .nav-item .nav-link:hover{
+   color: rgb(47, 203, 200);
+}
+
+.big-text{
+    margin: 100px 0 5px 0;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+
+.header p{
+    color: rgb(127, 128, 130);
+    padding: 20px 120px 0 0;
+}
+
+.img-header-text{
+    width: 100%;
+}
+
+.img-about{
+    height: 150px;
+    width: 150px;
+}
+
+
+
+.header .btn-info{
+    background-color: rgb(16, 201, 195) !important;
+    color: white !important;
+    width: 192px;
+    width: 192px;
+    font-weight: 500;
+    margin: 22px 0;
+}
+
+
+#skills{
+   
+    background-color: rgb(249, 249, 249);
+}
+
+#skills .progress{
+    height: 3px;
+    margin: 15px 0 15px 0;
+    overflow: visible;
+    background-color: rgb(216, 216, 216);
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+
+#skills .prgress-bar{
+    background: rgb(16, 201, 195);
+    animation: animate-positive 2s;
+}
+
+#skills .progress .progress-value{
+    width: 65px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    color:  rgb(16,201,195);
+    border-radius: 0 0 15px 15px;
+    border: 1px solid #d8d8d8;
+    border-top: none;
+    box-shadow: 0 2px 2px #4f4c4c;
+    position: absolute;
+    bottom: -25px;
+    right: 60px;
+    display: none;
+    transition: all 0.3s ease 0s;
+}
+
+
+#skills .progress:hover{
+    height: 7px;
+}
+
+#skills .progress:hover .progress-value{
+    display: block;
+}
+
+
+
+#skills h2{
+    margin: 130px 0 10px 0;
+}
+
+#skills h3{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+    transition: all 0.3s ease 0s;
+}
+
+
+#numbers {
+    background: rgb(16, 201, 195);
+}
+
+#numbers h2{
+    font-size: 16px;
+    font-weight: 200;
+    padding: 0px;
+    margin: 21px 10px 0px 0px;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+
+#numbers h3{
+    font-size: 16px;
+    font-weight: 200;
+    padding: 0px;
+    margin: 2px 0 10px 0px;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+
+#numbers .icons{
+    margin: 19px 8px 16px 7px;
+    height: 40px;
+    width: 40px;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+    transition: all 0.3s ease 0s;
+}
+
+#numbers .padding{
+ padding: 0 0 0 64px;
+}
+
+
+#numbers .hov{
+    transition: all 0.3s ease 0s;
+  }
+
+#numbers .hov:hover .icons {
+    filter: brightness(0) invert(0);
+
+}
+
+#numbers .hov:hover h2{
+  color: black; 
+  font-weight: 400;
+}
+
+
+#numbers .hov:hover h3{
+    color: black; 
+    font-weight: 400;
+  }
+
+#products .one{
+    position: relative;
+    background-color: rgb(228, 228, 228) !important;
+}
+
+#products .two{
+    
+    position: relative;
+    background-color: rgb(239, 239, 239);
+}
+
+
+#products .forHov1{
+
+    transition: all 0.3s ease 0s; 
+}
+
+
+#products .forHov{
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+}
+
+#products .forHov:hover{
+   
+    border-radius: 10px;
+}
+
+#products .forHov:hover .forHov1{
+    
+    position: absolute;
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.76);
+    
+}
+
+#products .forHov-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-82%, -60%);
+   height: 10%;
+   width: 10%;
+   filter: brightness(25) invert(1);
+   display: none;
+   
+}
+
+#products .product-img{
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease 0s;
+}
+
+#products .forHov:hover .forHov-img{
+   display: block;
+   object-fit: contain;
+}
+
+#products .forHov:hover .product-img{
+   border-radius: 10px;
+   
+ }
+
+#products .more{
+    background-color: rgb(245, 245, 245);
+    transition: all 0.3s ease 0s;
+}
+
+
+#products .more:hover{
+    background-color: rgb(221, 221, 221);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#products .more h5{
+    text-align: center;
+    font-size: 15px;
+    color: rgb(142, 142, 142);
+}
+
+#products .more-a{
+    text-decoration: none;
+  
+    color: rgb(142, 142, 142);
+}
+
+#work-process h2{
+    margin: 100px 0 32px 0;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+
+#work-process p{
+    color: rgb(127, 128, 130);
+    padding: 19px 0 72px 0;
+}
+
+#work-process .embed-responsive-item{
+    height: 100%;
+    width: 100%;
+    margin: 0 0 133px 0;
+
+}
+
+#category{
+    background-color: rgb(245, 245, 245);
+}
+#cate{
+    padding: 0 0 38px 0;
+}
+#category .icons{
+    margin: 22px auto;
+    display: block;
+    height: 40px;
+    width: 55px;
+    filter: grayscale(100%);
+    object-fit: contain;
+    
+}
+
+
+#category h2{
+    font-size: 13px;
+    font-weight: 650;
+    text-align: center;
+}
+
+#category p{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(127, 128, 130);
+}
+
+#category .two{
+    position: relative;
+}
+
+#category .forHov{
+    padding: 20px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    
+}
+
+#category .forHov:hover{
+    border-radius: 10px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(47, 203, 200);
+    
+}
+
+#category .forHov:hover .icons{
+    margin: 22px auto;
+    display: block;
+    height: 40px;
+    width: 55px;
+    filter: brightness(0) invert(1);
+}
+
+#category .forHov:hover h2{
+    color: white;
+    font-size: 13px;
+    font-weight: 650;
+    text-align: center;
+   
+}
+
+#category .forHov:hover p{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+}
+
+#category .row {
+    --bs-gutter-x: 0rem;
+}
+
+
+#sliders {
+    background-color: rgb(16, 201, 195);
+    
+}
+
+#sliders p{
+    text-align: center;
+    padding: 6px 100px 10px 100px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+#sliders h2{
+    text-align: center;
+    padding: 0px 100px 50px 100px;
+    font-size: 12px;
+    color: white;
+}
+
+
+#sliders .padding{
+    padding: 150px 0;
+}
+
+#clients .logo{
+    height: 100px;
+    width: 100px;
+    filter: grayscale(100%);
+
+}
+
+
+#con-form{
+    background-color: rgb(245, 245, 245);
+    padding: 0px 0 17px 0;
+}
+
+#form h2{
+    text-align: center;
+    padding: 41px 7px 41px 0;
+    
+}
+
+#form p{
+    text-align: center;
+    padding: 0px 77px 33px 51px;
+   color: rgb(125, 125, 125);
+}
+
+.div-form #form-name{
+    padding: 7px 0px 11px 14px;
+    margin: 0px 0 19px 0;
+}
+
+
+.div-form #form-email{
+    padding: 7px 0px 11px 14px;
+    margin: 0px 0 19px 0;
+}
+
+.div-form #form-title{
+    padding: 7px 0px 11px 14px;
+    margin: 0px 0 19px 0;
+}
+
+.div-form #form-textArea{
+    padding: 10px 0px 80px 14px;
+}
+
+
+.div-form #form-button{
+    background-color: rgb(16, 201, 195);
+    color: white;
+    border-color: rgb(16, 201, 195);
+    width: 222px;
+    font-weight: 500;
+    margin: 22px 0;
+    padding: 12px 19px 15px 6px;
+}
+
+.padding-form{
+    padding: 0 0 0 0;
+}
+
+#footer {
+    background-color: black;
+}
+
+#footer .links-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer h2{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px 0 14px 15px;
+}
+
+#footer p{
+    color: white;
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 3px 0px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#footer ul{
+    list-style: none;
+}
+
+
+#footer ul li{
+    color: white;
+    margin: 2px 0px;
+    font-size: 14px;
+    font-weight: 100;
+}
+ 
+#footer ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#footer ol, ul {
+    padding-left: 1rem;
+}
+
+@media (min-width: 767px) and (max-width: 996px) {
+
+    #skills img{
+        margin: 140px  0px 0px 0;
+    }
+}
+
+
+
+
+@media (max-width: 575px){
+
+    #work-process .embed-responsive{
+        height: 34%;
+    }
+
+    #clients .logo {
+        margin: 0 0px 0 35%;
+    }
+    
+    
+    #footer h2{
+         margin: 0px 0 14px 20px;
+    }
+
+    #footer p{
+         padding: 0px 0px 0px 20px;
+    }
+
+}
+
+
+@media (min-width: 640px) and (max-width: 767px) {
+    #clients .logo {
+        padding: 4px 3px 7px 6px;
+        margin: 0px 98px 0 35%;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 639px) {
+    #clients .logo {
+        padding: 4px 3px 7px 6px;
+        margin: 0 60px 0 35%;
+    }
+}
+
+@media (min-width: 779px) and (max-width: 873px) {
+    
+    
+#footer h2{
+    margin: 0px 0 14px 15px;
+}
+
+#footer p{
+    margin: 0px 0px 3px 17px;
+    padding: 0 0 0 0;
+}
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 778px) {
+    
+    
+    #footer h2{
+        margin: 0px 0 14px 10px;
+    }
+    
+    #footer p{
+        margin: 0px 0px 3px 10px;
+        padding: 0 0 0 0;
+    }
+    
+    
+    }
+    
+@media (max-width: 411px) {
+        
+    #footer h2{
+    margin: 0px 0 14px 0px;
+    }
+
+    #footer p{
+        padding: 0px 0px 0px 0px;
+    }
+
+    #footer ol, ul {
+        padding-left: 0rem;
+    } 
+}

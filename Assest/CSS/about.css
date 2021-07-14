@@ -1,0 +1,56 @@
+.header{
+    background-color: white;
+}
+
+#def{
+    background-image: url('../Images/yeshi-kangrang-PM_VwL2ypes-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+#def h2{
+    margin-top: 18%;
+    color: white;
+}
+
+
+#def p{
+    margin-bottom: 18%;
+    color: white;
+}
+
+#def .con{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+#aboutme h2{
+    margin-top: 7%;
+}
+
+#aboutme p{
+    padding-right: 27%;
+}
+
+#aboutme .img-about{
+    height: 145px;
+    width: 150px;
+}
+
+
+#form h2 {
+    padding: 15% 7px 2%;
+}
+
+#form #form-button{
+    background-color: rgb(16, 201, 195);
+    color: white;
+    border-color: rgb(16, 201, 195);
+    width: 220px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 0 10% 0;
+    padding: 12px 19px 15px 6px;
+}
