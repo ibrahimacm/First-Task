@@ -578,10 +578,25 @@
         var email = document.getElementById("form-email").value;
         var title = document.getElementById("form-title").value;
         var comment = document.getElementById("form-textArea").value;
+        var country = document.getElementById("country").value;
+        var city = document.getElementById("city");
+        var dis = document.getElementById("district");
+        
+        if (country=="usa"){
+          city = document.getElementById("form-city").value;
+          district = document.getElementById("form-district").value;
+        } else{
+            city = city.options[city.selectedIndex].text;
+            dis = dis.options[dis.selectedIndex].text;
+        }
+
         localStorage.setItem("namee", name);
         localStorage.setItem("emaill", email);
         localStorage.setItem("titlee", title);
         localStorage.setItem("commentt", comment);
+        localStorage.setItem("country", country);
+        localStorage.setItem("city", city);
+        localStorage.setItem("dis", dis);
         return false;
       }
 
