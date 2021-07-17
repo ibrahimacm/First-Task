@@ -3,8 +3,9 @@
   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="Assest/CSS/style.css">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
-    </head>
+    <script src="./Assest/JS/operation.js"></script>
+  
+</head>
 
 <body>
     <header class="header">
@@ -572,102 +573,6 @@
       </div>
     </footer>
 
-    <script>
-      function pass(){
-        var name = document.getElementById("form-name").value;
-        var email = document.getElementById("form-email").value;
-        var title = document.getElementById("form-title").value;
-        var comment = document.getElementById("form-textArea").value;
-        var country = document.getElementById("country").value;
-        var city = document.getElementById("city");
-        var dis = document.getElementById("district");
-        
-        if (country=="usa"){
-          city = document.getElementById("form-city").value;
-          district = document.getElementById("form-district").value;
-        } else{
-            city = city.options[city.selectedIndex].text;
-            dis = dis.options[dis.selectedIndex].text;
-        }
-
-        localStorage.setItem("namee", name);
-        localStorage.setItem("emaill", email);
-        localStorage.setItem("titlee", title);
-        localStorage.setItem("commentt", comment);
-        localStorage.setItem("country", country);
-        localStorage.setItem("city", city);
-        localStorage.setItem("dis", dis);
-        return false;
-      }
-
-          
-      function populate(country, city, dis){
-          var country = document.getElementById(country);
-          var city = document.getElementById(city);
-          var dis = document.getElementById(dis);
-          if(country != null)
-          city.innerHTML = "";
-          if(dis != null)
-          dis.innerHTML = "";
-
-          if(country != null){
-          if(country.value == "ksa"){
-            document.getElementById("city").disabled = false;
-            var optionarray = ["selectCity|--select city--" , "riyadh|Riyadh" , "dammam|Dammam"];
-            document.getElementById("city").style.display = "block";
-            document.getElementById("district").style.display = "block";
-            document.getElementById("form-city").style.display = "none";
-            document.getElementById("form-district").style.display = "none";
-          } else if (country.value == "usa"){
-            document.getElementById("city").style.display = "none";
-            document.getElementById("district").style.display = "none";
-            document.getElementById("form-city").style.display = "block";
-            document.getElementById("form-district").style.display = "block";
-          }
-          else if (country.value == "select"){
-            document.getElementById("city").style.display = "block";
-            document.getElementById("district").style.display = "block";
-            document.getElementById("form-city").style.display = "none";
-            document.getElementById("form-district").style.display = "none";
-            var optionarray = ["selectCity|--Country not selected--", "selectDis|--City not selected--"];
-            document.getElementById("district").disabled = true;
-            document.getElementById("city").disabled = true;
-           
-          }
-        }
-
-          if (city.value == "riyadh") {
-            document.getElementById("district").disabled = false;
-            var optionarray = ["selectCity|--select district--", "taawun|Taa'wun" , "khaleej|Khaleej"];
-          }
-          else if (city.value == "dammam") {
-            document.getElementById("district").disabled = false;
-            var optionarray = ["selectCity|--select district--", "waha|Waha"];
-          }
-          else if (city.value == "selectCity"){
-            document.getElementById("district").disabled = true;
-            var optionarray = ["selectDis|--City not selected--"];
-
-          }
-
-          for (var option in optionarray){
-            var pair = optionarray[option].split("|");
-            var newOption = document.createElement("option");
-            newOption.value = pair[0];
-            newOption.innerHTML = pair[1];
-            
-            if(country != null){
-            city.options.add(newOption);
-            if(country.value == "select" && newOption.value == "selectDis"){
-              dis.options.add(newOption);
-            }
-            }
-            else {
-              dis.options.add(newOption);
-            }
-          }
-        }
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
