@@ -9,7 +9,7 @@
     </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
             <div class="container">
               <a class="navbar-brand" href="index.html">Navbar</a>
@@ -38,10 +38,6 @@
       <div class="container-fluid" id="con-form">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="back" id="nammee">
-                       
-                    </div>
-                    
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-12">
                   <div class="row">
@@ -74,17 +70,17 @@
                     <div class="col-sm-6 col-md-6 col-lg-6"> 
                       <div class="div-form">
 
-                        <form class="row g-3">
+                        <form class="row g-3" onsubmit="show(); return false">
                           <div class="col-sm-6 col-md-6 col-lg-6">
-                            <input type="text" class="form-control w-80 first" id="form-name" placeholder="Your Name">
+                            <input name="fullname" type="text" class="form-control w-80 first" id="form-name" placeholder="Your Name" required>
                           </div>
                           <div class="col-sm-6 col-md-6 col-lg-6">
-                            <input type="email" class="form-control w-80 first" id="form-email" placeholder="Your Email">
+                            <input name="email" type="email" class="form-control w-80 first" id="form-email" placeholder="Your Email" required>
                           </div>
 
                           <div class="col-sm-4 col-md-4 col-lg-4">
                             
-                            <select name="first" id="country" class="form-control" onchange="populate(this.id , 'city', 'district')" >
+                            <select name="first" id="country" class="form-control" onchange="populate(this.id , 'city', 'district')" required>
                               <option value="select">--select country--</option>
                               <option value="ksa">Saudi Arabia</option>
                               <option value="usa">United States of America</option>
@@ -93,31 +89,32 @@
 
                           <div class="col-sm-4 col-md-4 col-lg-4">
                            
-                            <select name="second" id="city" class="form-control" onchange="populate('nothing' ,this.id, 'district')" style="display: block;" disabled></select>
-                            <input type="text" class="form-control w-100" id="form-city" placeholder="Your City" style="display: none;">
+                            <select name="second" id="city" class="form-control" onchange="populate('nothing' ,this.id, 'district')" style="display: block;" required disabled></select>
+                            <input name="second" type="text" class="form-control w-100" id="form-city" placeholder="Your City" style="display: none;">
                           </div>
                           
                           <div class="col-sm-4 col-md-4 col-lg-4">
                             
-                            <select name="third" id="district" class="form-control" style="display: block;" disabled></select>
+                            <select name="third" id="district" class="form-control" style="display: block;" required disabled></select>
                             <input type="text" class="form-control w-100" id="form-district" placeholder="Your District" style="display: none;">
 
                           </div>
 
                           <div class="col-sm-12 col-md-12 col-lg-12">
-                            <input type="text" class="form-control w-100" id="form-title" placeholder="Your Title">
+                            <input name="title" type="text" class="form-control w-100" id="form-title" placeholder="Your Title" required>
                           </div>
 
                           <div class="col-sm-12 col-md-12 col-lg-12">
-                            <textarea class="form-control" id="form-textArea" rows="3" placeholder="Your Comment"></textarea>
+                            <textarea name="comment" class="form-control" id="form-textArea" rows="3" placeholder="Your Comment" required></textarea>
                           </div>
 
                           <div class="col-sm-12 col-md-12 col-lg-12">
                             
                           </div>
-                        </form>
-                        <button type="submit" class="btn btn-primary" id="form-button" onclick="show();">SEND MESSAGE</button>
+                          <button type="submit" class="btn btn-primary" id="form-button">SEND MESSAGE</button>
 
+                        </form>
+                        
 
 
                       </div>
@@ -138,8 +135,33 @@
              </div>
          
     </div>
+
+    
     </section>
 
+    <section id="popup">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12">
+                  <a href="#" onclick="show()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="float: right;">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                  </svg></a>
+                </div>
+                <div class="col-12 box">
+                   <h1 class="title mt-3">Success</h1>
+                   <p class="des mt-3">Your message has been sent</p>
+                     <div class="checkMark mb-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
     <footer id="footer">
       <div class="container-fluid ">
         <div class="row">

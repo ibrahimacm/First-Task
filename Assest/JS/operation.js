@@ -1,6 +1,7 @@
 let map;
-
+var flag = true;
 function initMap() {
+  
   const myLatLng = { lat: 34.03264123581623, lng: -118.48646245169223 };
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 13,
@@ -31,7 +32,7 @@ function pass(){
       city = city.options[city.selectedIndex].text;
       dis = dis.options[dis.selectedIndex].text;
   }
-
+  
   localStorage.setItem("namee", name);
   localStorage.setItem("emaill", email);
   localStorage.setItem("titlee", title);
@@ -111,10 +112,51 @@ function populate(country, city, dis){
   }
 
   function show(){
-    var name = document.getElementById("form-name");
-    var names = document.getElementById("form-name").value;
-    document.getElementById("nammee").innerHTML = "Thank you " + names + " for contact us!... ";
-    document.getElementById("nammee").style.display = "block";
+    var header = document.getElementById("header");
+    header.classList.toggle('active');
+    var form = document.getElementById("form");
+    form.classList.toggle("active");
+    var footer = document.getElementById("footer");
+    footer.classList.toggle("active");
+    var pop = document.getElementById("popup");
+    pop.classList.toggle("active");
+    
+
+    if(flag){
+    var name = document.getElementById("form-name").value;
+  var email = document.getElementById("form-email").value;
+  var title = document.getElementById("form-title").value;
+  var comment = document.getElementById("form-textArea").value;
+  var country = document.getElementById("country");
+  var city = document.getElementById("city");
+  var dis = document.getElementById("district");
+  
+  if (country.value=="usa"){
+    country = country.options[country.selectedIndex].text;
+    city = document.getElementById("form-city").value;
+    dis = document.getElementById("form-district").value;
+  } else{
+      country = country.options[country.selectedIndex].text;
+      city = city.options[city.selectedIndex].text;
+      dis = dis.options[dis.selectedIndex].text;
+  }
+  
+
+    console.log(name);
+    console.log(email);
+    console.log(title);
+    console.log(comment);
+    console.log(country);
+    console.log(city);
+    console.log(dis);
+    flag = false;
+    }
+    else{
+      flag = true;
+      location.reload();
+    }
+
+    
 }
 
 
