@@ -53,6 +53,8 @@
               </div>
     </header>
     
+    <button onclick="scrolldown()"><div id="scrollDown"></div></button>
+
     <section id="about-us">
         <div class="container ">
             <div class="container-fluid">
@@ -466,19 +468,19 @@
 
                       <div class="div-form">
 
-                        <form class="row g-3" action="thanks.html" method="POST">
+                        <form class="row g-3" action="thanks.html" method="POST" onsubmit="pass();">
 
                           <div class="col-sm-6 col-md-6 col-lg-6">
-                            <input type="text" class="form-control w-80 first" id="form-name" placeholder="Your Name">
+                            <input name= "name" type="text" class="form-control w-80 first" id="form-name" placeholder="Your Name" required>
                           </div>
                           <div class="col-sm-6 col-md-6 col-lg-6">
-                            <input type="email" class="form-control w-80 first" id="form-email" placeholder="Your Email">
+                            <input name= "email" type="email" class="form-control w-80 first" id="form-email" placeholder="Your Email" required>
                           </div>
                           
                           <div class="col-sm-4 col-md-4 col-lg-4">
                             
-                          <select name="first" id="country" class="form-control" onchange="populate(this.id , 'city', 'district')" >
-                            <option value="select">--select country--</option>
+                          <select name="country" id="country" class="form-control" onchange="populate(this.id , 'city', 'district')" required>
+                            <option value="">--select country--</option>
                             <option value="ksa">Saudi Arabia</option>
                             <option value="usa">United States of America</option>
                           </select>
@@ -486,28 +488,28 @@
 
                         <div class="col-sm-4 col-md-4 col-lg-4">
                          
-                          <select name="second" id="city" class="form-control" onchange="populate('nothing' ,this.id, 'district')" style="display: block;" disabled></select>
-                          <input type="text" class="form-control w-100" id="form-city" placeholder="Your City" style="display: none;">
+                          <select name="city" id="city" class="form-control" onchange="populate('nothing' ,this.id, 'district')" style="display: block;" required disabled></select>
+                          <input name= "form-city" type="text" class="form-control w-100" id="form-city" placeholder="Your City" style="display: none;">
                         </div>
                         
                         <div class="col-sm-4 col-md-4 col-lg-4">
                           
-                          <select name="third" id="district" class="form-control" style="display: block;" disabled></select>
-                          <input type="text" class="form-control w-100" id="form-district" placeholder="Your District" style="display: none;">
+                          <select name="district" id="district" class="form-control" style="display: block;" required disabled></select>
+                          <input name= "form-district" type="text" class="form-control w-100" id="form-district" placeholder="Your District" style="display: none;">
 
                         </div>
 
 
                           <div class="col-sm-12 col-md-12 col-lg-12">
-                            <input type="text" class="form-control w-100" id="form-title" placeholder="Your Title">
+                            <input type="text" class="form-control w-100" id="form-title" placeholder="Your Title" required>
                           </div>
 
                           <div class="col-sm-12 col-md-12 col-lg-12">
-                            <textarea class="form-control" id="form-textArea" rows="3" placeholder="Your Comment"></textarea>
+                            <textarea class="form-control" id="form-textArea" rows="3" placeholder="Your Comment" required></textarea>
                           </div>
 
                           <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                            <button type="submit" class="btn btn-primary" id="form-button" onclick="pass();">SEND MESSAGE</button>
+                            <button type="submit" class="btn btn-primary" id="form-button" >SEND MESSAGE</button>
                           </div>
                           
                         </form>

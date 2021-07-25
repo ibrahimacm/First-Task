@@ -33,6 +33,7 @@
           </nav>
     </header>
     
+    <div id="progressbar"></div>
 
     <section id="form">
       <div class="container-fluid" id="con-form">
@@ -80,8 +81,8 @@
 
                           <div class="col-sm-4 col-md-4 col-lg-4">
                             
-                            <select name="first" id="country" class="form-control" onchange="populate(this.id , 'city', 'district')" required>
-                              <option value="select">--select country--</option>
+                            <select name="country" id="country" class="form-control" onchange="populate(this.id , 'city', 'district')" required>
+                              <option value="">--select country--</option>
                               <option value="ksa">Saudi Arabia</option>
                               <option value="usa">United States of America</option>
                             </select>
@@ -89,14 +90,14 @@
 
                           <div class="col-sm-4 col-md-4 col-lg-4">
                            
-                            <select name="second" id="city" class="form-control" onchange="populate('nothing' ,this.id, 'district')" style="display: block;" required disabled></select>
-                            <input name="second" type="text" class="form-control w-100" id="form-city" placeholder="Your City" style="display: none;">
+                            <select name="city" id="city" class="form-control" onchange="populate('nothing' ,this.id, 'district')" style="display: block;" required disabled></select>
+                            <input name="form-city" type="text" class="form-control w-100" id="form-city" placeholder="Your City" style="display: none;" >
                           </div>
                           
                           <div class="col-sm-4 col-md-4 col-lg-4">
                             
-                            <select name="third" id="district" class="form-control" style="display: block;" required disabled></select>
-                            <input type="text" class="form-control w-100" id="form-district" placeholder="Your District" style="display: none;">
+                            <select name="district" id="district" class="form-control" style="display: block;" required disabled></select>
+                            <input name="form-district" type="text" class="form-control w-100" id="form-district" placeholder="Your District" style="display: none;" >
 
                           </div>
 
@@ -217,4 +218,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
    
 </body>
+<script type="text/javascript">
+  let progress = document.getElementById("progressbar");
+  let totalHeight = document.body.scrollHeight - window.innerHeight;
+  window.onscroll = function(){
+    let progressHeight = (window.pageYOffset / totalHeight) * 100;
+    progress.style.height = progressHeight + "%";
+  }
+</script>
 </html>

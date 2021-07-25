@@ -27,7 +27,7 @@ function pass(){
     country = country.options[country.selectedIndex].text;
     city = document.getElementById("form-city").value;
     dis = document.getElementById("form-district").value;
-  } else{
+  } else if (country.value=="ksa"){
       country = country.options[country.selectedIndex].text;
       city = city.options[city.selectedIndex].text;
       dis = dis.options[dis.selectedIndex].text;
@@ -56,18 +56,26 @@ function populate(country, city, dis){
     if(country != null){
     if(country.value == "ksa"){
       document.getElementById("city").disabled = false;
-      var optionarray = ["selectCity|--select city--" , "riyadh|Riyadh" , "dammam|Dammam"];
+      var optionarray = ["|--select city--" , "riyadh|Riyadh" , "dammam|Dammam"];
       document.getElementById("city").style.display = "block";
       document.getElementById("district").style.display = "block";
       document.getElementById("form-city").style.display = "none";
       document.getElementById("form-district").style.display = "none";
+      document.getElementById("form-city").required = false;
+      document.getElementById("form-district").required = false;
+      document.getElementById("city").required = true;
+      document.getElementById("district").required = true;
     } else if (country.value == "usa"){
       document.getElementById("city").style.display = "none";
       document.getElementById("district").style.display = "none";
       document.getElementById("form-city").style.display = "block";
       document.getElementById("form-district").style.display = "block";
+      document.getElementById("form-city").required = true;
+      document.getElementById("form-district").required = true;
+      document.getElementById("city").required = false;
+      document.getElementById("district").required = false;
     }
-    else if (country.value == "select"){
+    else if (country.options[country.selectedIndex].text == "--select country--"){
       document.getElementById("city").style.display = "block";
       document.getElementById("district").style.display = "block";
       document.getElementById("form-city").style.display = "none";
@@ -75,23 +83,24 @@ function populate(country, city, dis){
       var optionarray = ["selectCity|--Country not selected--", "selectDis|--City not selected--"];
       document.getElementById("district").disabled = true;
       document.getElementById("city").disabled = true;
+      document.getElementById("form-city").required = false;
+      document.getElementById("form-district").required = false;
+      document.getElementById("city").required = true;
+      document.getElementById("district").required = true;
      
     }
   }
 
+  
     if (city.value == "riyadh") {
       document.getElementById("district").disabled = false;
-      var optionarray = ["selectCity|--select district--", "taawun|Taa'wun" , "khaleej|Khaleej"];
+      var optionarray = ["|--select district--", "taawun|Taa'wun" , "khaleej|Khaleej"];
     }
     else if (city.value == "dammam") {
       document.getElementById("district").disabled = false;
-      var optionarray = ["selectCity|--select district--", "waha|Waha"];
+      var optionarray = ["|--select district--", "waha|Waha"];
     }
-    else if (city.value == "selectCity"){
-      document.getElementById("district").disabled = true;
-      var optionarray = ["selectDis|--City not selected--"];
-
-    }
+    
 
     for (var option in optionarray){
       var pair = optionarray[option].split("|");
@@ -101,7 +110,7 @@ function populate(country, city, dis){
       
       if(country != null){
       city.options.add(newOption);
-      if(country.value == "select" && newOption.value == "selectDis"){
+      if(country.options[country.selectedIndex].text == "--select country--" && newOption.value == "selectDis"){
         dis.options.add(newOption);
       }
       }
@@ -157,6 +166,10 @@ function populate(country, city, dis){
     }
 
     
+}
+
+function scrolldown(){
+  document.documentElement.scrollTop +=100;
 }
 
 

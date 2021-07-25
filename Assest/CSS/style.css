@@ -497,6 +497,32 @@
     padding-left: 1rem;
 }
 
+
+
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background: #10c9c3;
+    border-radius: 5px;
+}
+
+#scrollDown{
+    position: fixed;
+    height: 15px;
+    width: 15px;
+    border: 2px solid black;
+    bottom: 2%;
+    right: 2%;
+    transform: rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+}
+
+
+/* media query for multiscreen */
+
 @media (min-width: 767px) and (max-width: 996px) {
 
     #skills img{

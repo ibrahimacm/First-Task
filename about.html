@@ -33,6 +33,8 @@
            
     </header>
 
+    <div id="progressbar"></div>
+
     <section id="def">
     <div class="container-fluid con" id="con-product">
         <div class="row justify-content-center">
@@ -203,4 +205,12 @@
       </footer>
   
 </body>
+<script type="text/javascript">
+  let progress = document.getElementById("progressbar");
+  let totalHeight = document.body.scrollHeight - window.innerHeight;
+  window.onscroll = function(){
+    let progressHeight = (window.pageYOffset / totalHeight) * 100;
+    progress.style.height = progressHeight + "%";
+  }
+</script>
 </html>

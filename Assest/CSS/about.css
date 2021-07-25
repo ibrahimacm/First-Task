@@ -54,3 +54,17 @@
     margin: 0 0 10% 0;
     padding: 12px 19px 15px 6px;
 }
+
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 0px !important;
+}
+
+#progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 6px;
+    background: #10c9c3;
+    border-radius: 5px;
+}
