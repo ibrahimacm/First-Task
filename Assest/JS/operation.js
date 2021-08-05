@@ -175,7 +175,15 @@ function scrolldown(){
 $(document).ready(function(){
 
   // jQuery methods go here...
-  
+  $( "#country" )
+  .change(function() {
+    var str = "";
+    $( "select option:selected" ).each(function() {
+      str += $( this ).text() + " ";
+    });
+    $( "div" ).text( str );
+  })
+  .trigger( "change" );
 
 });
 
