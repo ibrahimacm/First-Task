@@ -118,7 +118,7 @@ function populate(country, city, dis){
         dis.options.add(newOption);
       }
     }
-  }
+}
 
   function show(){
     var header = document.getElementById("header");
@@ -172,4 +172,10 @@ function scrolldown(){
   document.documentElement.scrollTop +=100;
 }
 
+$(document).ready(function(){
+
+  // jQuery methods go here...
+  
+
+});
 
