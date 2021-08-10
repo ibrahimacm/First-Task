@@ -172,18 +172,10 @@ function scrolldown(){
   document.documentElement.scrollTop +=100;
 }
 
-$(document).ready(function(){
-
-  // jQuery methods go here...
-  $( "#country" )
-  .change(function() {
-    var str = "";
-    $( "select option:selected" ).each(function() {
-      str += $( this ).text() + " ";
-    });
-    $( "div" ).text( str );
-  })
-  .trigger( "change" );
-
-});
+async function get(){
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos/4");
+  const data = await response.json();
+  console.log(data.completed);
+}
+get();
 
